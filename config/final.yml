@@ -1,0 +1,6 @@
+---
+blobstore:
+  provider: s3
+  options:
+    bucket_name: oauth2-proxy-boshrelease
+final_name: oauth2-proxy

@@ -1,0 +1,6 @@
+---
+- type: replace
+  path: /releases/name=oauth2-proxy
+  value:
+    name: oauth2-proxy
+    version: latest

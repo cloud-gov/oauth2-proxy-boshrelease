@@ -1,0 +1,6 @@
+---
+name: oauth2-proxy
+packages: []
+templates:
+  ignoreme: ignoreme
+properties: {}

@@ -1,0 +1,60 @@
+[submodule "src/github.com/bitly/oauth2_proxy"]
+	path = src/github.com/bitly/oauth2_proxy
+	url = https://github.com/bitly/oauth2_proxy
+	branch = master
+[submodule "src/github.com/18F/hmacauth"]
+	path = src/github.com/18F/hmacauth
+	url = https://github.com/18F/hmacauth
+	branch = master
+[submodule "src/github.com/BurntSushi/toml"]
+	path = src/github.com/BurntSushi/toml
+	url = https://github.com/BurntSushi/toml
+	branch = master
+[submodule "src/github.com/coreos/go-oidc"]
+	path = src/github.com/coreos/go-oidc
+	url = https://github.com/coreos/go-oidc
+	branch = master
+[submodule "src/github.com/mreiferson/go-options"]
+	path = src/github.com/mreiferson/go-options
+	url = https://github.com/mreiferson/go-options
+	branch = master
+[submodule "src/gopkg.in/fsnotify.v1"]
+	path = src/gopkg.in/fsnotify.v1
+	url = https://gopkg.in/fsnotify.v1
+	branch = master
+[submodule "src/github.com/bitly/go-simplejson"]
+	path = src/github.com/bitly/go-simplejson
+	url = https://github.com/bitly/go-simplejson
+	branch = master
+[submodule "src/github.com/pquerna/cachecontrol"]
+	path = src/github.com/pquerna/cachecontrol
+	url = https://github.com/pquerna/cachecontrol
+	branch = master
+[submodule "src/golang.org/x/oauth2"]
+	path = src/golang.org/x/oauth2
+	url = https://go.googlesource.com/oauth2
+	branch = master
+[submodule "src/gopkg.in/square/go-jose.v2"]
+	path = src/gopkg.in/square/go-jose.v2
+	url = https://gopkg.in/square/go-jose.v2
+	branch = master
+[submodule "src/golang.org/x/net"]
+	path = src/golang.org/x/net
+	url = https://go.googlesource.com/net
+	branch = master
+[submodule "src/google.golang.org/api"]
+	path = src/google.golang.org/api
+	url = https://code.googlesource.com/google-api-go-client
+	branch = master
+[submodule "src/cloud.google.com/go"]
+	path = src/cloud.google.com/go
+	url = https://code.googlesource.com/gocloud
+	branch = master
+[submodule "src/golang.org/x/crypto"]
+	path = src/golang.org/x/crypto
+	url = https://go.googlesource.com/crypto
+	branch = master
+[submodule "src/golang.org/x/sys"]
+	path = src/golang.org/x/sys
+	url = https://go.googlesource.com/sys
+	branch = master

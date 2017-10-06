@@ -1,0 +1,5 @@
+check process oauth2-proxy
+  with pidfile /var/vcap/sys/run/oauth2-proxy/oauth2-proxy.pid
+  start program "/var/vcap/jobs/oauth2-proxy/bin/monit_debugger ctl '/var/vcap/jobs/oauth2-proxy/bin/ctl start'"
+  stop program "/var/vcap/jobs/oauth2-proxy/bin/monit_debugger ctl '/var/vcap/jobs/oauth2-proxy/bin/ctl stop'"
+  group vcap

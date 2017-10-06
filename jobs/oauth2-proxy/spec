@@ -1,6 +1,29 @@
 ---
 name: oauth2-proxy
-packages: []
+
+packages:
+- oauth2-proxy
+
 templates:
-  ignoreme: ignoreme
-properties: {}
+  bin/ctl: bin/ctl
+  bin/monit_debugger: bin/monit_debugger
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+properties:
+  address:
+    description: Proxy listen address
+  upstream:
+    description: Proxy upstream address
+  provider:
+    description: OAuth provider
+  client_id:
+    description: OAuth client ID
+  client_secret:
+    description: OAuth client secret
+  cookie_secret:
+    description: Cookie secret
+  oidc_issuer_url:
+    descrption: OIDC issuer URL
+  email_domain:
+    description: Authenticate users with matching domains

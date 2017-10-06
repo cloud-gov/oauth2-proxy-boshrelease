@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -e # exit immediately if a simple command exits with a non-zero status
+set -u # report the usage of uninitialized variables
+
+# Setup env vars and folders for the webapp_ctl script
+source /var/vcap/jobs/oauth2-proxy/helpers/ctl_setup.sh 'oauth2-proxy'
+
+export LANG=en_US.UTF-8
+
+case $1 in
+
+  start)
+    pid_guard $PIDFILE $JOB_NAME
+
+    # store pid in $PIDFILE
+    echo $$ > $PIDFILE
+
+    exec chpst -u vcap:vcap oauth2-proxy \
+        --http-address <%= p('address') \
+        --upstream <%= p('upstream') \
+        --provider <%= p('provider') \
+        --client-id <%= p('client_id') \
+        --client-secret <%= p('client_secret') \
+        --cookie-secret <%= p('cookie_secret') \
+        --oidc-issuer-url <%= p('oidc_issuer_url') \
+        --email-domain <%= p('email_domain') \
+        >>$LOG_DIR/$JOB_NAME.log 2>&1
+
+    ;;
+
+  stop)
+    kill_and_wait $PIDFILE
+
+    ;;
+  *)
+    echo "Usage: ctl {start|stop}"
+
+    ;;
+
+esac
+exit 0

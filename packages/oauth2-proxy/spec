@@ -1,0 +1,10 @@
+---
+name: oauth2-proxy
+dependencies:
+- golang
+files:
+- gopkg.in/**/*
+- github.com/**/*
+- golang.org/**/*
+- cloud.google.com/**/*
+- google.golang.org/**/*

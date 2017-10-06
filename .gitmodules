@@ -12,7 +12,7 @@
 	branch = master
 [submodule "src/github.com/coreos/go-oidc"]
 	path = src/github.com/coreos/go-oidc
-	url = https://github.com/coreos/go-oidc
+	url = https://github.com/jmcarp/go-oidc
 	branch = master
 [submodule "src/github.com/mreiferson/go-options"]
 	path = src/github.com/mreiferson/go-options

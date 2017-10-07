@@ -21,6 +21,8 @@ properties:
     description: OAuth client ID
   client_secret:
     description: OAuth client secret
+  redirect_url:
+    description: OAuth redirect URL
   cookie_secret:
     description: Cookie secret
   oidc_issuer_url:

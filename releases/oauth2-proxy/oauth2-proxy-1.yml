@@ -1,0 +1,25 @@
+name: oauth2-proxy
+version: "1"
+commit_hash: c86ff2a
+uncommitted_changes: false
+jobs:
+- name: oauth2-proxy
+  version: 0919628b576a0e7518d11278ea62758fce01e799
+  fingerprint: 0919628b576a0e7518d11278ea62758fce01e799
+  sha1: e9dc85e7baa494231f1e38d657c0765aa36a4874
+packages:
+- name: golang
+  version: 5b13e60ca6154a882fd44349694483283c4f4196
+  fingerprint: 5b13e60ca6154a882fd44349694483283c4f4196
+  sha1: d098da609853af833be032d6b964c00dca277a54
+  dependencies: []
+- name: oauth2-proxy
+  version: 04c6329dbf88d0804a5150a09fb8e32ce53b62ed
+  fingerprint: 04c6329dbf88d0804a5150a09fb8e32ce53b62ed
+  sha1: fd0eb0acf08ac99d497c6b034f30c1998e63299a
+  dependencies:
+  - golang
+license:
+  version: f9cd5c1eadac6168ccac3cf4b538781de47b4cb6
+  fingerprint: f9cd5c1eadac6168ccac3cf4b538781de47b4cb6
+  sha1: 4a893fe6187c882de698700d860a949e0a0d3898

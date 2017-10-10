@@ -21,11 +21,11 @@ properties:
     description: OAuth client ID
   client_secret:
     description: OAuth client secret
-  redirect_url:
-    description: OAuth redirect URL
   cookie_secret:
     description: Cookie secret
-  oidc_issuer_url:
-    descrption: OIDC issuer URL
   email_domain:
     description: Authenticate users with matching domains
+  redirect_url:
+    description: OAuth redirect URL
+  oidc_issuer_url:
+    descrption: OIDC issuer URL

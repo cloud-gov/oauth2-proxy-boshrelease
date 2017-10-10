@@ -17,15 +17,15 @@ case $1 in
     echo $$ > $PIDFILE
 
     exec chpst -u vcap:vcap oauth2_proxy \
-        --http-address "<%= p('address') %>" \
-        --upstream "<%= p('upstream') %>" \
-        --provider "<%= p('provider') %>" \
-        --client-id "<%= p('client_id') %>" \
-        --client-secret "<%= p('client_secret') %>" \
-        --redirect-url "<%= p('redirect_url') %>" \
-        --cookie-secret "<%= p('cookie_secret') %>" \
-        --oidc-issuer-url "<%= p('oidc_issuer_url') %>" \
-        --email-domain "<%= p('email_domain') %>" \
+        --http-address="<%= p('address') %>" \
+        --upstream="<%= p('upstream') %>" \
+        --provider="<%= p('provider') %>" \
+        --client-id="<%= p('client_id') %>" \
+        --client-secret="<%= p('client_secret') %>" \
+        --cookie-secret="<%= p('cookie_secret') %>" \
+        --email-domain="<%= p('email_domain') %>" \
+        <% if_p('redirect_url') do |redirect_url| %>--redirect-url="<%= redirect_url %>" <% end %> \
+        <% if_p('oidc_issuer_url') do |oidc_issuer_url| %>--oidc-issuer-url="<%= oidc_issuer_url %>" <% end %> \
         >>$LOG_DIR/$JOB_NAME.log 2>&1
 
     ;;

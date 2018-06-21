@@ -29,3 +29,9 @@ properties:
     description: OAuth redirect URL
   oidc_issuer_url:
     descrption: OIDC issuer URL
+  browser_xss_filter:
+    descrption: true/false flag for whether to turn on the browser XSS header
+    default: true
+  content_type_nosniff:
+    descrption: true/false flag for whether to turn on the nosniff header
+    default: true

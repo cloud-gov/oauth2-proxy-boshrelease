@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 apt-get update
 apt-get install -y git
 
-pushd ${BOSH_INSTALL_TARGET}/src/github.com/bitly/oauth2_proxy
+pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2_proxyy/oauth2_proxy
   dep ensure
   go install
 popd

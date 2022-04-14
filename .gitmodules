@@ -2,3 +2,6 @@
 	path = src/github.com/bitly/oauth2_proxy
 	url = https://github.com/oauth2-proxy/oauth2-proxy
 	branch = master
+[submodule "src/github.com/oauth2-proxy/oauth2-proxy"]
+	path = src/github.com/oauth2-proxy/oauth2-proxy
+	url = https://github.com/oauth2-proxy/oauth2-proxy.git

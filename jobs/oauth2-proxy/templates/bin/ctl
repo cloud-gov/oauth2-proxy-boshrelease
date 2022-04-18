@@ -16,7 +16,7 @@ case $1 in
     # store pid in $PIDFILE
     echo $$ > $PIDFILE
 
-    exec chpst -u vcap:vcap oauth2_proxy \
+    exec chpst -u vcap:vcap oauth2-proxy \
         --http-address="<%= p('address') %>" \
         --upstream="<%= p('upstream') %>" \
         --provider="<%= p('provider') %>" \

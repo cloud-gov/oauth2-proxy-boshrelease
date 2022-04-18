@@ -10,14 +10,14 @@ export GOPATH=$BOSH_INSTALL_TARGET
 
 export PATH=$PATH:$(pwd)
 export INSTALL_DIRECTORY=$(pwd)
-curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+# curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 apt-get update
 apt-get install -y git
 
 pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2-proxy/oauth2-proxy
-  dep ensure
-  go install
+  #dep ensure
+  go build
 popd
 
 # Clean up source artifacts

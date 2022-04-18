@@ -17,7 +17,7 @@ apt-get install -y git
 
 pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2-proxy/oauth2-proxy
   #dep ensure
-  go build
+  go build -buildvcs=false
 popd
 
 # Clean up source artifacts

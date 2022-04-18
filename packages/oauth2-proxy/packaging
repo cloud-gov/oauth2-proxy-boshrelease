@@ -20,6 +20,5 @@ pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2-proxy/oauth2-proxy
   go install
 popd
 
-sleep 10000
 # Clean up source artifacts
 rm -rf ${BOSH_INSTALL_TARGET}/src ${BOSH_INSTALL_TARGET}/pkg

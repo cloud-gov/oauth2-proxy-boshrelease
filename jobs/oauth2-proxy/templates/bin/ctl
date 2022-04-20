@@ -25,6 +25,8 @@ case $1 in
         --cookie-secret="<%= p('cookie_secret') %>" \
         --email-domain="<%= p('email_domain') %>"  \
         --custom-sign-in-logo=/var/vcap/jobs/oauth2-proxy/config/cg-logo.png \
+        <% if_p('redirect_url') do |redirect_url| %>--redirect-url="<%= redirect_url %>" <% end %> \
+        <% if_p('oidc_issuer_url') do |oidc_issuer_url| %>--oidc-issuer-url="<%= oidc_issuer_url %>" <% end %> \
         >>$LOG_DIR/$JOB_NAME.log 2>&1
 
     ;;

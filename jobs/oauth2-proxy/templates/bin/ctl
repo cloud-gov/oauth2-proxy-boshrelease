@@ -23,9 +23,8 @@ case $1 in
         --client-id="<%= p('client_id') %>" \
         --client-secret="<%= p('client_secret') %>" \
         --cookie-secret="<%= p('cookie_secret') %>" \
-        --email-domain="<%= p('email_domain') %>" \
-        <% if_p('redirect_url') do |redirect_url| %>--redirect-url="<%= redirect_url %>" <% end %> \
-        <% if_p('oidc_issuer_url') do |oidc_issuer_url| %>--oidc-issuer-url="<%= oidc_issuer_url %>" <% end %> \
+        --email-domain="<%= p('email_domain') %>"  \
+        --custom-sign-in-logo=/var/vcap/jobs/oauth2-proxy/config/cg-logo.png \
         >>$LOG_DIR/$JOB_NAME.log 2>&1
 
     ;;

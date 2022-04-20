@@ -9,6 +9,7 @@ templates:
   bin/monit_debugger: bin/monit_debugger
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  config/cg-logo.png: config/cg-logo.png
 
 properties:
   address:
@@ -29,9 +30,3 @@ properties:
     description: OAuth redirect URL
   oidc_issuer_url:
     descrption: OIDC issuer URL
-  browser_xss_filter:
-    descrption: true/false flag for whether to turn on the browser XSS header
-    default: true
-  content_type_nosniff:
-    descrption: true/false flag for whether to turn on the nosniff header
-    default: true

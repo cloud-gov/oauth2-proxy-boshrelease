@@ -5,19 +5,18 @@ mkdir -p ${BOSH_INSTALL_TARGET}/src
 mkdir -p ${BOSH_INSTALL_TARGET}/bin
 cp -a . ${BOSH_INSTALL_TARGET}/src
 
-source /var/vcap/packages/golang-1.10-linux/bosh/compile.env
+source /var/vcap/packages/golang-1.18-linux/bosh/compile.env
 export GOPATH=$BOSH_INSTALL_TARGET
 
 export PATH=$PATH:$(pwd)
 export INSTALL_DIRECTORY=$(pwd)
-curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 apt-get update
 apt-get install -y git
 
-pushd ${BOSH_INSTALL_TARGET}/src/github.com/bitly/oauth2_proxy
-  dep ensure
-  go install
+pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2-proxy/oauth2-proxy
+  go build -buildvcs=false
+  cp oauth2-proxy ${BOSH_INSTALL_TARGET}/bin
 popd
 
 # Clean up source artifacts

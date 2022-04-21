@@ -1,6 +1,6 @@
 ---
 name: oauth2-proxy
 dependencies:
-- golang-1.10-linux
+- golang-1.18-linux
 files:
 - github.com/**/*

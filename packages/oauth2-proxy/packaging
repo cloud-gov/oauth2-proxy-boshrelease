@@ -1,23 +1,7 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-mkdir -p ${BOSH_INSTALL_TARGET}/src
-mkdir -p ${BOSH_INSTALL_TARGET}/bin
-cp -a . ${BOSH_INSTALL_TARGET}/src
+mkdir oauth2-proxy
+tar zxvf oauth2-proxy/oauth2-proxy-v*.linux-amd64.tar.gz -c oauth2-proxy
 
-source /var/vcap/packages/golang-1.18-linux/bosh/compile.env
-export GOPATH=$BOSH_INSTALL_TARGET
-
-export PATH=$PATH:$(pwd)
-export INSTALL_DIRECTORY=$(pwd)
-
-apt-get update
-apt-get install -y git
-
-pushd ${BOSH_INSTALL_TARGET}/src/github.com/oauth2-proxy/oauth2-proxy
-  go build -buildvcs=false
-  cp oauth2-proxy ${BOSH_INSTALL_TARGET}/bin
-popd
-
-# Clean up source artifacts
-rm -rf ${BOSH_INSTALL_TARGET}/src ${BOSH_INSTALL_TARGET}/pkg
+cp oauth2-proxy/oauth2-proxy ${BOSH_INSTALL_TARGET}/bin

@@ -1,7 +1,7 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-mkdir oauth2-proxy
-tar zxvf oauth2-proxy/oauth2-proxy-*.linux-amd64.tar.gz -c oauth2-proxy
+mkdir oauth2-proxy-binary
+tar zxvf oauth2-proxy/oauth2-proxy-*.linux-amd64.tar.gz -c oauth2-proxy-binary
 
-cp oauth2-proxy/oauth2-proxy ${BOSH_INSTALL_TARGET}/bin
+cp oauth2-proxy-binary/oauth2-proxy ${BOSH_INSTALL_TARGET}/bin

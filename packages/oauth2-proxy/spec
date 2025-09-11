@@ -2,4 +2,4 @@
 name: oauth2-proxy
 dependencies:
 files:
-- oauth2-proxy/oauth2-proxy-*.linux-amd64.tar.gz
+- oauth2-proxy-*.linux-amd64.tar.gz

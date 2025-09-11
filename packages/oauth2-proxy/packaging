@@ -4,4 +4,4 @@ set -u # report the usage of uninitialized variables
 mkdir oauth2-proxy-binary
 tar zxvf oauth2-proxy/oauth2-proxy-*.linux-amd64.tar.gz -C oauth2-proxy-binary
 
-cp oauth2-proxy-binary/oauth2-proxy-*.linux-amd64/oauth2-proxy ${BOSH_INSTALL_TARGET}/bin
+cp oauth2-proxy-binary/oauth2-proxy-*.linux-amd64/oauth2-proxy ${BOSH_INSTALL_TARGET}/oauth2-proxy

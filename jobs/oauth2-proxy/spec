@@ -10,6 +10,7 @@ templates:
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
   config/cg-logo.png: config/cg-logo.png
+  config/oauth2-proxy.cfg.erb: config/oauth2-proxy.cfg
 
 properties:
   address:
@@ -30,3 +31,9 @@ properties:
     description: OAuth redirect URL
   oidc_issuer_url:
     descrption: OIDC issuer URL
+  scope:
+    description: OAuth Scope
+  oidc_groups_claim:
+    description: OAuth Group claim (default is groups)
+  allowed_groups:
+    description: Restrict login to members of a group

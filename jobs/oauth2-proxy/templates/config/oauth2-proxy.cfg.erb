@@ -1,0 +1,42 @@
+## OAuth2 Proxy Config File
+## https://github.com/oauth2-proxy/oauth2-proxy
+
+## <addr>:<port> to listen on for HTTP/HTTPS clients
+# http_address = "127.0.0.1:4180"
+# https_address = ":443"
+
+http_address = "<%= p('address') %>"
+
+
+## the http url(s) of the upstream endpoint
+upstream = "<%= p('upstream') %>"
+
+
+## provider config
+provider = "<%= p('provider') %>"
+client_id = "<%= p('client_id') %>"
+client_secret = "<%= p('client_secret') %>"
+cookie_secret = "<%= p('cookie_secret') %>"
+email_domain = "<%= p('email_domain') %>"
+custom_sign_in_logo = /var/vcap/jobs/oauth2-proxy/config/cg-logo.png
+
+<% if_p('scope') do %>
+scope = "<%= scope %>"
+<% end %>
+
+<% if_p('oidc_groups_claim') do %>
+oidc_groups_claim = "<%= oidc_groups_claim %>"
+<% end %>
+
+<% if_p('allowed_groups') do %>
+allowed_groups = "<%= allowed_groups %>"
+<% end %>
+
+
+<% if_p('redirect_url') do %>
+redirect_url = "<%= redirect_url %>"
+<% end %>
+
+<% if_p('oidc_issuer_url') do %>
+oidc_issuer_url = "<%= oidc_issuer_url %>"
+<% end %>

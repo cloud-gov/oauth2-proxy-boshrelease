@@ -9,7 +9,7 @@ http_address = "<%= p('address') %>"
 
 
 ## the http url(s) of the upstream endpoint
-upstream = "<%= p('upstream') %>"
+upstreams = "<%= p('upstream') %>"
 
 
 ## provider config
@@ -17,8 +17,8 @@ provider = "<%= p('provider') %>"
 client_id = "<%= p('client_id') %>"
 client_secret = "<%= p('client_secret') %>"
 cookie_secret = "<%= p('cookie_secret') %>"
-email_domain = "<%= p('email_domain') %>"
-custom_sign_in_logo = /var/vcap/jobs/oauth2-proxy/config/cg-logo.png
+email_domains = "<%= p('email_domain') %>"
+custom_sign_in_logo = "/var/vcap/jobs/oauth2-proxy/config/cg-logo.png"
 
 <% if_p('scope') do %>
 scope = "<%= p('scope') %>"
